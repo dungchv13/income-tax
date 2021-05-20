@@ -51,4 +51,16 @@ public class HomeController {
         model.addAttribute("result",(TaxResult) session.getAttribute("result"));
         return "index";
     }
+
+//    @GetMapping("/clearTax")
+//    public String clearTax(Model model){
+//        session.removeAttribute("tax");
+//        session.removeAttribute("result");
+//        model.addAttribute("tax",new Tax());
+//        return "index";
+//    }
+
+
+
+
 }

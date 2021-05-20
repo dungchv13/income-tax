@@ -10,8 +10,6 @@
             crossorigin="anonymous"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="//cdn.rawgit.com/rainabba/jquery-table2excel/1.1.0/dist/jquery.table2excel.min.js"></script>
-    <script type="text/javascript" src="/js/index.js"></script>
-    <script src="../static/js/index.js"></script>
 </head>
 <body>
 
@@ -68,17 +66,18 @@
             <table class="table">
                 <tr>
                     <td><h5>Tổng thu nhập</h5></td>
-                    <td><input type="number" th:field="*{totalIncome}" class="form-control"></td>
+                    <td><input type="number" th:field="*{totalIncome}" class="form-control" required></td>
+
                     <td>vnd</td>
                 </tr>
                 <tr>
                     <td><h5>Lương đóng bảo hiểm</h5></td>
-                    <td><input type="number" th:field="*{insuranceSalary}" class="form-control"></td>
+                    <td><input type="number" th:field="*{insuranceSalary}" class="form-control" required></td>
                     <td>vnd</td>
                 </tr>
                 <tr>
                     <td><h5>Số người phụ thuộc</h5></td>
-                    <td><input type="number" th:field="*{numberDepends}" class="form-control"></td>
+                    <td><input type="number" th:field="*{numberDepends}" class="form-control" required></td>
                 </tr>
                 <tr>
                     <td>
@@ -140,17 +139,17 @@
                 <table class="table">
                     <tr>
                         <td><h5>Năm bắt đầu làm việc</h5></td>
-                        <td><input type="number" name="startYear" th:value="${startYear}" class="form-control"></td>
+                        <td><input type="number" name="startYear" th:value="${startYear}" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td><h5>Năm nghỉ hưu</h5></td>
-                        <td><input type="number" name="retirementYear" th:value="${retirementYear}" class="form-control"></td>
+                        <td><input type="number" name="retirementYear" th:value="${retirementYear}" class="form-control" required></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
                             <button style="margin-top: 10px" type="submit" class="btn btn-primary">SUBMIT</button>
-                            <button style="margin-top: 10px" type="reset" class="btn btn-secondary">RESET</button>
+                            <a style="margin-top: 10px"  class="btn btn-secondary" href="/clearTax">RESET</a>
                         </td>
                     </tr>
                 </table>
